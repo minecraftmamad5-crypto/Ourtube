@@ -92,7 +92,7 @@ jobs:
           echo "Validating provided key: $USER_KEY"
 
           # Key must be exactly 4 digits
-          if ! [[ "$USER_KEY" =~ ^[0-9]{4}$ ]]; then
+          if [[ "$USER_KEY" =~ ^[0-9]{4}$ ]]; then
             echo ""
             echo "=============================================="
             echo "❌ کدفعالسازی اشتباه بود"
